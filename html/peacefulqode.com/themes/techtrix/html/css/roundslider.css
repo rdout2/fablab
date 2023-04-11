@@ -1,0 +1,402 @@
+  /* Section Services */
+
+  .circle--rotate {
+    border-radius: 50%;
+    border: 1px #000000 solid;
+    width: 75%;
+    height: 45%;
+    margin: 0 auto 0;
+    position: relative;
+    transform: rotate(0deg);
+    z-index: 0;
+    padding: 0;
+  }
+
+  .circle--rotate>li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    z-index: 10;
+    visibility: hidden;
+  }
+
+  .circle--rotate>li .icon {
+    visibility: visible;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 50%;
+    background-color: #000000;
+    height: 14%;
+    width: 14%;
+    margin: -7% auto;
+    transition: all 500ms ease;
+    -webkit-box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+  }
+
+  .circle--rotate>li i {
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    margin: auto;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: table;
+  }
+
+  .circle--rotate>li i::before {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .circle--rotate>li img {
+    margin: auto;
+  }
+
+  .circle--slider {
+    position: relative;
+  }
+
+  .circle--slider .rotate--circle {
+    margin: 0 auto;
+  }
+
+  .circle--slider .circle--rotate>li div {
+    position: relative;
+    overflow: visible;
+    background-color: var(--dark-color);
+  }
+
+  .circle--slider .circle--rotate>li div span {
+    transform: rotate(0deg);
+    transition: all 2s;
+    opacity: 0;
+  }
+
+  .circle--slider .circle--rotate>li.active div {
+    font-size: 20px;
+    background-color: var(--primary-color);
+    transition: all 1s;
+  }
+
+  .circle--slider .circle--rotate>li.active div span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    z-index: -1;
+    opacity: 1;
+  }
+
+  .circle--slider .count2 li:nth-child(2) {
+    transform: rotate(180deg);
+  }
+
+  .circle--slider .count3 li:nth-child(2) {
+    transform: rotate(120deg);
+  }
+
+  .circle--slider .count3 li:nth-child(3) {
+    transform: rotate(240deg);
+  }
+
+  .circle--slider .count4 li:nth-child(2) {
+    transform: rotate(90deg);
+  }
+
+  .circle--slider .count4 li:nth-child(3) {
+    transform: rotate(180deg);
+  }
+
+  .circle--slider .count4 li:nth-child(4) {
+    transform: rotate(270deg);
+  }
+
+  .circle--slider .count5 li:nth-child(2) {
+    transform: rotate(72deg);
+  }
+
+  .circle--slider .count5 li:nth-child(3) {
+    transform: rotate(144deg);
+  }
+
+  .circle--slider .count5 li:nth-child(4) {
+    transform: rotate(216deg);
+  }
+
+  .circle--slider .count5 li:nth-child(5) {
+    transform: rotate(-72deg);
+  }
+
+  .circle--slider .count6 li:nth-child(2) {
+    transform: rotate(60deg);
+  }
+
+  .circle--slider .count6 li:nth-child(3) {
+    transform: rotate(120deg);
+  }
+
+  .circle--slider .count6 li:nth-child(4) {
+    transform: rotate(180deg);
+  }
+
+  .circle--slider .count6 li:nth-child(5) {
+    transform: rotate(240deg);
+  }
+
+  .circle--slider .count6 li:nth-child(6) {
+    transform: rotate(-60deg);
+  }
+
+  .circle--slider .count7 li:nth-child(2) {
+    transform: rotate(51.5deg);
+  }
+
+  .circle--slider .count7 li:nth-child(3) {
+    transform: rotate(103deg);
+  }
+
+  .circle--slider .count7 li:nth-child(4) {
+    transform: rotate(154.5deg);
+  }
+
+  .circle--slider .count7 li:nth-child(5) {
+    transform: rotate(206deg);
+  }
+
+  .circle--slider .count7 li:nth-child(6) {
+    transform: rotate(-103deg);
+  }
+
+  .circle--slider .count7 li:nth-child(7) {
+    transform: rotate(-51.5deg);
+  }
+
+  .circle--slider .count8 li:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .circle--slider .count8 li:nth-child(3) {
+    transform: rotate(90deg);
+  }
+
+  .circle--slider .count8 li:nth-child(4) {
+    transform: rotate(135deg);
+  }
+
+  .circle--slider .count8 li:nth-child(5) {
+    transform: rotate(180deg);
+  }
+
+  .circle--slider .count8 li:nth-child(6) {
+    transform: rotate(-135deg);
+  }
+
+  .circle--slider .count8 li:nth-child(7) {
+    transform: rotate(-90deg);
+  }
+
+  .circle--slider .count8 li:nth-child(8) {
+    transform: rotate(-45deg);
+  }
+
+  .circle--slider .count9 li:nth-child(2) {
+    transform: rotate(40deg);
+  }
+
+  .circle--slider .count9 li:nth-child(3) {
+    transform: rotate(80deg);
+  }
+
+  .circle--slider .count9 li:nth-child(4) {
+    transform: rotate(120deg);
+  }
+
+  .circle--slider .count9 li:nth-child(5) {
+    transform: rotate(160deg);
+  }
+
+  .circle--slider .count9 li:nth-child(6) {
+    transform: rotate(-160deg);
+  }
+
+  .circle--slider .count9 li:nth-child(7) {
+    transform: rotate(-120deg);
+  }
+
+  .circle--slider .count9 li:nth-child(8) {
+    transform: rotate(-80deg);
+  }
+
+  .circle--slider .count9 li:nth-child(9) {
+    transform: rotate(-40deg);
+  }
+
+  .circle--slider .count10 li:nth-child(2) {
+    transform: rotate(36deg);
+  }
+
+  .circle--slider .count10 li:nth-child(3) {
+    transform: rotate(72deg);
+  }
+
+  .circle--slider .count10 li:nth-child(4) {
+    transform: rotate(108deg);
+  }
+
+  .circle--slider .count10 li:nth-child(5) {
+    transform: rotate(144deg);
+  }
+
+  .circle--slider .count10 li:nth-child(6) {
+    transform: rotate(-180deg);
+  }
+
+  .circle--slider .count10 li:nth-child(7) {
+    transform: rotate(-144deg);
+  }
+
+  .circle--slider .count10 li:nth-child(8) {
+    transform: rotate(-108deg);
+  }
+
+  .circle--slider .count10 li:nth-child(9) {
+    transform: rotate(-72deg);
+  }
+
+  .circle--slider .count10 li:nth-child(10) {
+    transform: rotate(-36deg);
+  }
+
+  .circle--slider .animate-wrapper {
+    width: 55%;
+    height: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+  }
+
+  .circle--slider .animate-title {
+    color: var(--white-color);
+  }
+
+  .circle--slider .animate-more .middel-title {
+    color: var(--white-color);
+  }
+
+  .circle--slider .animate-img {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .circle--slider .animate-img .animate-img__in {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    z-index: 3;
+    transform: rotate3d(0, 0, 0, 0deg) scale(0.85);
+    transition: 0.55s ease-in-out;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 10%);
+  }
+
+  .circle--slider .animate-more {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s 0.4s;
+    min-width: 131px;
+    overflow: hidden;
+    text-align: center;
+    z-index: 30;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    padding: 15px;
+    height: 62px;
+    transform: scale(0.8);
+  }
+
+  .circle--slider .animate.active .animate-more {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .circle--slider .animate.active .animate-img .animate-img__in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .circle--slider .prev,
+  .circle--slider .next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    height: 62px;
+    width: 87px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .circle--slider .prev span,
+  .circle--slider .next span {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    font-weight: 700;
+  }
+
+  .circle--slider .prev {
+    left: 250px;
+  }
+
+  .circle--slider .next {
+    right: 250px;
+  }
+
+  .circle--slider .prev,
+  .circle--slider .next {
+    display: none;
+  }
+
+
+  @media(max-width:479px) {
+    .circle--rotate>li i {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }

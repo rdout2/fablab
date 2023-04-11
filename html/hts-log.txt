@@ -1,0 +1,33 @@
+HTTrack3.49-2 launched on Tue, 11 Apr 2023 10:36:39 at https://peacefulqode.com/themes/techtrix/html/main-home.html
+(httrack https://peacefulqode.com/themes/techtrix/html/main-home.html )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:41:38	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/product-portfolio-single.html (from https://peacefulqode.com/themes/techtrix/html/main-home.html)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/app-devlopment.html (from https://peacefulqode.com/themes/techtrix/html/main-home.html)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/web-devlpopment.html (from https://peacefulqode.com/themes/techtrix/html/main-home.html)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/web-devlopment.html (from https://peacefulqode.com/themes/techtrix/html/main-home.html)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/fonts/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 (from https://peacefulqode.com/themes/techtrix/html/rev/fonts/font-awesome/css/font-awesome.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/css/openhand.cur (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/css/closedhand.cur (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/assets/gridtile.png (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/assets/gridtile_white.png (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/assets/gridtile_3x3.png (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/assets/gridtile_3x3_white.png (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/assets/coloredbg.png (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/rev/assets/loader.gif (from https://peacefulqode.com/themes/techtrix/html/rev/css/rs6.css)
+10:42:08	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/css/owl.video.play.png (from https://peacefulqode.com/themes/techtrix/html/css/owl.carousel.min.css)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/problem-solutions.html (from https://peacefulqode.com/themes/techtrix/html/start-up-home.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/professional-services.html (from https://peacefulqode.com/themes/techtrix/html/portfolio-single.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/data-protection.html (from https://peacefulqode.com/themes/techtrix/html/portfolio-single.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/cloud-computing.html (from https://peacefulqode.com/themes/techtrix/html/one-column-blog.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/cyber-security.html (from https://peacefulqode.com/themes/techtrix/html/one-column-blog.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/device-management.html (from https://peacefulqode.com/themes/techtrix/html/one-column-blog.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/events.html (from https://peacefulqode.com/themes/techtrix/html/one-column-blog.html)
+10:42:09	Error: 	"Not Found" (404) at link https://peacefulqode.com/themes/techtrix/html/on-demand-it.html (from https://peacefulqode.com/themes/techtrix/html/one-column-blog.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 5 minutes 30 seconds : 248 links scanned, 225 files written (30968663 bytes overall) [26663382 bytes received at 80798 bytes/sec], 9996566 bytes transferred using HTTP compression in 119 files, ratio 26%, 13.7 requests per connection
+(22 errors, 0 warnings, 0 messages)
