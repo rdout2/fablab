@@ -1,0 +1,100 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block extra_css %}{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'layout/header-2.html' %}
+
+<!--Breadcrumb Start-->
+<div class="pq-breadcrumb pq-bg-dark pq-bg-img-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <div class="pq-breadcrumb-title">
+                        <h1>Nos Formations</h1>
+                    </div>
+                    <div class="pq-breadcrumb-container">
+                        <ol class="breadcrumb align-items-center">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home me-2"></i>Acceuil</a>
+                            </li>
+                            <li class="breadcrumb-item active"> Nos Formations</li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Breadcrumb End-->
+
+<!--Left Sidebar Start-->
+<section class="left-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="pq-blog pq-blog-col-1">
+                    <div class="row">
+                        {%for post in trainings %}
+                        <div class="col-lg-6">
+                            <div class="pq-blog-post">
+                                <div class="pq-post-media">
+                                    <img loading="lazy" src="{{ post.image.url }}" alt="blog-img" style="width: 100%; height: 350px;">
+                                    <div class="pq-post-date">
+                                        <a href="#">
+                                            <span>26</span>Jan
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pq-blog-contain">
+                                    <div class="pq-post-meta">
+                                        <ul>
+                                            <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
+                                            <li class="pq-post-meta"><a href="#"><i class="fa fa-calendar"></i>{{ post.timestamp|date:"d M Y" }}</a></li>
+                                            <li class="pq-post-tag">
+                                                <a href="#"><i class="fa fa-tag"></i>categories : {{ post.category }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="pq-blog-title"><a href="#">{{post.name}}</a></h5>
+                                    <p>{{post.description|safe|truncatechars:250}}</p>
+                                    <div class="pq-btn-container">
+                                        <a href="{% url 'training_detail' post.slug %}" class="pq-button">
+                                            <div class="pq-button-block">
+                                                <span class="pq-button-text">Lire la suite</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                
+                
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="pq-pagination">
+                                <nav aria-label="Page navigation">
+                                    <ul class="page-numbers">
+                                        <li><span aria-current="page" class="page-numbers current">1</span></li>
+                                        <li><a class="page-numbers" href="#">2</a></li>
+                                        <li><a class="next page-numbers" href="#">Next page</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Left Sidebar End-->
+
+
+
+
+
+{% endblock %}
+
+{% block extra_javascript %}{% endblock %}

@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | FabLab</title>
+    <!--favicon icon-->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}">
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'assets/rev/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/rev/fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/rev/css/rs6.css' %}">
+    <!--owl carousel-->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <!--Progressbar CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animations.min.css' %}">
+    <!-- Magnefic Popup CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <!--icon css -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/themify-icons/themify-icons.css' %}">
+    <!--style css-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!--responsive css-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- Loading Start-->
+    <div id="pq-loading">
+        <div id="pq-loading-center">
+            <img src="{% static 'assets/images/FabLab.png' %}" alt="loading">
+        </div>
+    </div>
+    <!--Loading End -->
+
+    
+
+    {% block content %}{% endblock %}
+
+
+    {% include 'layout/footer.html' %}
+
+    <!--Back to top Start-->
+    <div id="back-to-top">
+        <a class="top" id="#top" href="#"> <i class="ion-ios-arrow-up"></i> </a>
+    </div>
+    <!--Back to top End-->
+
+    <!--Jquery js-->
+    <script data-cfasync="false"
+        src="https://peacefulqode.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <!--Bootstrap js-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!--Owl Carousel js-->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!--isotope js-->
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <!--countTo js-->
+    <script src="{% static 'assets/js/jquery.countTo.min.js' %}"></script>
+    <!--Maginfic-Popup js-->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Animation JS -->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!--Rev Slider js-->
+    <script src="{% static 'assets/rev/js/rbtools.min.js' %}"></script>
+    <script src="{% static 'assets/rev/js/rs6.min.js' %}"></script>
+    <script src="{% static 'assets/js/rev-custom.js' %}"></script>
+    <!--Custom js-->
+    <script src="{% static 'assets/js/rough-script.js' %}"></script>
+    <script src="{% static 'assets/js/rough-notation.iife.js' %}"></script>
+    <script src="{% static 'assets/js/rough-custom.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    {% block extra_javascript %}{% endblock %}
+</body>
+
+</html>

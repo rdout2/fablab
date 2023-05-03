@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<!--Header Start-->
+<header id="pq-header" class="pq-header-style-1 pq-has-sticky">
+    <div class="pq-top-header">
+        <div class="container-fluid">
+        </div>
+    </div>
+    <div class="pq-bottom-header pq-has-sticky">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">
+                            <img class="{% static 'assets/img-fluid logo' %}"
+                                src="{% static 'assets/images/logos/fablab.png' %}" alt="techtrix">
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div id="pq-menu-contain" class="pq-menu-contain">
+                                <ul id="pq-main-menu" class="navbar-nav ml-auto">
+                                    <li class="menu-item current-menu-item manu-item-has-children">
+                                        <a href="{% url 'home' %}">Acceuil</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{% url 'apropos' %}">A Propos</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{% url 'machine' %}">Nos Machines</a>
+                                         
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{% url 'training' %}">Nos Formations</a>
+                                       
+                                    </li>
+                                   
+                                    <li class="menu-item">
+                                        
+                                        <a href="{% url 'blog' %}">Blogs</a>
+                                       
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="{% url 'contact' %}">Contact</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pq-header-info-box">
+                            <div class="pq-header-call">
+                                <a href="tel:+180045647824">
+                                    <i class="ion-ios-telephone"></i>
+                                    <div class="pq-call-info">
+                                        <h5>+235 60 00 00 00 </h5>
+                                        <span>Make a call</span>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Header End-->

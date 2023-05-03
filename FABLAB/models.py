@@ -42,6 +42,9 @@ pre_save.connect(presave_training_cat_slug, sender=TrainingCategory)
 class Training(models.Model) :
     category = models.ForeignKey(TrainingCategory, on_delete=models.CASCADE, null=False, blank=False)
     name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
+    prix = models.CharField(_("Tarif de Formation"),max_length=255, null=False, blank=False)
+    debut_training = models.DateTimeField(null=False, blank=False )
+    fin_training   = models.DateTimeField(null=False, blank=False )
     description = models.TextField(null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
@@ -74,7 +77,7 @@ pre_save.connect(presave_training_slug, sender=Training)
 
 
 class BlogCategory (models.Model):
-    name = models.CharField(_("Nom"),max_length=255, null=False, blank=False, unique=True)
+    name =  models.CharField(_("Nom"),max_length=255, null=False, blank=False, unique=True)
     slug        = models.SlugField(_("Slug"), max_length=255, null=True, blank=True, editable=False, unique=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
@@ -106,7 +109,7 @@ pre_save.connect(presave_Blog_cat_slug, sender=BlogCategory)
 
 
 class Blog(models.Model) :
-    category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE, null=False, blank=False)
+    category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE, null=False, blank=False, related_name="category_blog")
     name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
@@ -134,6 +137,22 @@ def presave_Blog_slug(sender, instance, *args, **kwargs):
         instance.slug = create_Blog_slug(instance)
 pre_save.connect(presave_Blog_slug, sender=Blog)   
 
+
+
+
+
+class BlogComment(models.Model) :
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, null=False, blank=False, related_name="comment_blog")
+    first_name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
+    last_name = models.CharField(_("Prenom"),max_length=255, null=False, blank=False)
+    email = models.EmailField(_("Email"),max_length=255, null=False, blank=False)
+    message = models.TextField(_("Commentaire"),null=False, blank=False)
+    active     = models.BooleanField(_("Active"), default=True)
+    timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
+    updated    = models.DateTimeField(_("Updated At"), auto_now_add=False, auto_now=True)
+
+    def __str__(self):
+        return self.email
 
 
 
@@ -173,12 +192,15 @@ pre_save.connect(presave_machine_cat_slug, sender=MachineCategory)
 class Machine(models.Model):
     category = models.ForeignKey(MachineCategory, on_delete=models.CASCADE, null=False, blank=False)
     name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
+    quantite = models.IntegerField(_("quantite"), null=True, blank=True)
+    Prerequis = models.ForeignKey(TrainingCategory, on_delete=models.SET_NULL, null=True, blank=True)
     description = models.TextField(_("Description"),null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
     updated    = models.DateTimeField(_("Updated At"), auto_now_add=False, auto_now=True)
     image = models.ImageField(upload_to = 'media', null=False, blank=False)
     slug        = models.SlugField(_("Slug"), max_length=255, null=True, blank=True, editable=False, unique=False)
+    
     def __str__(self):
         return self.name
 
@@ -236,9 +258,9 @@ class Admission(models.Model) :
     last_name = models.CharField(_("Prenom"),max_length=255, null=False, blank=False)
     phone = models.CharField(_("Numero"),max_length=255, null=False, blank=False)
     email = models.EmailField(max_length=255, null=False, blank=False)
-    Training =  models.ForeignKey(Training, on_delete=models.CASCADE, null=False, blank=False)
-    cv = models.ImageField(upload_to = 'media', null=False, blank=False)
-    Motivation = models.TextField(null=False, blank=False)
+    training =  models.ForeignKey(Training, on_delete=models.CASCADE, null=False, blank=False)
+    cv = models.FileField(upload_to = 'media', null=False, blank=False)
+    motivation = models.TextField(null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
     updated    = models.DateTimeField(_("Updated At"), auto_now_add=False, auto_now=True)
@@ -251,8 +273,8 @@ class Admission(models.Model) :
 
 class Contact(models.Model) :
     first_name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
-    last_name = models.CharField(_("Prenom"),max_length=255, null=False, blank=False)
-    phone = models.CharField(_("Numero"),max_length=255, null=False, blank=False)
+    last_name = models.CharField(_("Prénom"),max_length=255, null=False, blank=False)
+    phone = models.CharField(_("Téléphone"),max_length=255, null=False, blank=False)
     email = models.EmailField(max_length=255, null=False, blank=False)
     subject = models.CharField(_("Sujet"),max_length=255, null=False, blank=False)
     message = models.TextField(null=False, blank=False)

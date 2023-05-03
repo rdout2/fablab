@@ -1,0 +1,131 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block extra_css %}{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'layout/header-2.html' %}
+
+    <!--Breadcrumb Start-->
+    <div class="pq-breadcrumb pq-bg-dark pq-bg-img-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb">
+                        <div class="pq-breadcrumb-title">
+                            <h1>Nous Contacter</h1>
+                        </div>
+                        <div class="pq-breadcrumb-container">
+                            <ol class="breadcrumb align-items-center">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home me-2"></i>Acceuil</a>
+                                </li>
+                                <li class="breadcrumb-item active">Contact</li>
+                            </ol>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Breadcrumb End-->
+    
+    <!--Contacts & Forms Start-->
+    <section class="contact-form">
+        <div class="container">
+           
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-5">
+                    <div class="pq-bg-dark pq-contact-form-p">
+                        <div class="pq-section pq-style-1 text-left">
+                            <h5 class="pq-section-title pq-text-white" id="contacts" data-high_text="Contacts" data-title_text="Our Contactst" data-rough_color="#fd4a18" data-rough_type="underline">  Notre Adresse</h5>
+                            <p class="pq-section-description pq-text-white"></p>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="pq-icon-box pq-style-5">
+                                        <div class="pq-icon">
+                                            <a href="#"><i class="ion ion-ios-location"></i></a>
+                                        </div>
+                                        <div class="pq-icon-box-content">
+                                            <h4 class="pq-text-white">Notre Adresse</h4>
+                                            <p class="pq-text-white mb-0">Avenue Maldom Bada Abbas, Immeuble BSIC 2eme Etage <br> N'Djamena - Tchad</p>
+                                        </div>
+                                    </div>
+                                    <div class="pq-icon-box pq-style-5">
+                                        <div class="pq-icon">
+                                            <a href="#"><i class="ion ion-email"></i></a>
+                                        </div>
+                                        <div class="pq-icon-box-content">
+                                            <h4 class="pq-text-white">E-Mail </h4>
+                                            <p class="pq-text-white mb-0"><a href="https://peacefulqode.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563f38303916263337353330233a273932337835393b">[email&#160;protected]</a></p>
+                                            <p class="pq-text-white mb-0"><a href="https://peacefulqode.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee87808881dcae9e8b8f8d8b889b829f818a8bc08d8183">[email&#160;protected]</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="pq-icon-box pq-style-5">
+                                        <div class="pq-icon">
+                                            <a href="#"><i class="fas fa-phone"></i></a>
+                                        </div>
+                                        <div class="pq-icon-box-content">
+                                            <h4 class="pq-text-white">Numero de telephone</h4>
+                                            <p class="pq-text-white mb-0"> + 235                 </p>
+                                            <p class="pq-text-white mb-0"> + 235                 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 mt-4 mt-lg-0">
+                    <div class="form-div">
+                        <div class="pq-section pq-style-1 text-left">
+                            <h5 class="pq-section-title" id="quote" data-high_text="Quote" data-title_text="Request A Quote" data-rough_color="#fd4a18" data-rough_type="underline">Une question ? Un projet ?</h5>
+                            <p class="pq-section-description">N’hésitez pas à nous rendre visite sur place, aux horaires d’ouverture ou à nous transmettre un message. Nous ne manquerons pas de vous recontacter.</p>
+                        </div>
+                        {% include 'message.html' %}
+                        <form method="POST">{% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    {{ form.first_name|as_crispy_field }}
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    {{ form.last_name|as_crispy_field }}
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    {{ form.email|as_crispy_field }}
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    {{ form.phone|as_crispy_field }}
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    {{ form.subject|as_crispy_field }}
+                                </div>
+                                <div class="col-lg-12">
+                                    {{ form.message|as_crispy_field }}
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit" class="pq-button form-btn">
+                                        <div class="pq-button-block">
+                                            <span class="pq-button-text">Envoi Message</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Contacts & Forms End-->
+
+    <!--Map Start-->
+    <div class="map p-0">
+        <div class="pq-bg-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d317893.19730324426!2d-0.1195537!3d51.5032973!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye%20Riverside%20Building%2C%20County%20Hall%20London%20SE1%207PB%20United%20Kingdom!3m2!1d51.5032973!2d-0.1195537!5e0!3m2!1sen!2sin!4v1652772883319!5m2!1sen!2sin" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!--Map ENd-->
+	
+{% endblock %}
+
+{% block extra_javascript %}{% endblock %}

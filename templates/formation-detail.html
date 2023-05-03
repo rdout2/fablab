@@ -1,0 +1,111 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block extra_css %}{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'layout/header-2.html' %}
+
+
+<!--Breadcrumb Start-->
+<div class="pq-breadcrumb pq-bg-dark pq-bg-img-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <div class="pq-breadcrumb-title">
+                        <h1>Nos Formations</h1>
+                    </div>
+                    <div class="pq-breadcrumb-container">
+                        <ol class="breadcrumb align-items-center">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i
+                                        class="fa fa-home me-2"></i>Acceuil</a>
+                            </li>
+                            <li class="breadcrumb-item active">{{training.name}}</li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Breadcrumb End-->
+
+<!--Portfolio-Single Start-->
+<section class="portfolio-single pq-pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <img src="{{training.image.url }}" alt="">
+            </div>
+            <div class="col-lg-4">
+                <div class="pq-portfolio-info-box">
+                    <div class="pq-porfolio-info-header">
+                        <h4 class="mt-4 mt-lg-0">Caractéristiques de la formation</h4>
+                        <p>.</p>
+                        <div class="pq-porfolio-info">
+                            <ul class="pq-info-list">
+                                <div>
+                                    <li>
+                                        <h5>Nom</h5>
+                                        <span>{{training.name}}</span>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <h5>Date de Debut </h5>
+                                        <span>{{ training.debut_training|date:"d M Y" }}</span>
+                                    </li>
+                                </div>
+                                <div>
+
+                                    <li>
+                                        <h5>Date de Fin</h5>
+                                        <span>{{ training.fin_training|date:"d M Y" }}</span>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <h5>Catégorie</h5>
+                                        <span>{{training.category}}</span>
+                                    </li>
+                                </div>
+                                <div>
+                                    <li>
+                                        <h5>Tarif de formation</h5>
+                                        <span>{{training.prix}}</span>
+                                    </li>
+                                    <div>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% if training.active %}
+                <div class="pq-btn-container">
+                    <a href="{% url 'training_postuler' training.slug  %}" class="pq-button">
+                        <div class="pq-button-block">
+                            <span class="pq-button-text">Postuler</span>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+            
+            </div>
+            <div class="col-lg-12">
+                <h2 class="pq-portfolio-single-title">{{training.name}}</h2>
+                <p>{{training.description|safe}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Portfolio-Single End-->
+
+
+
+
+
+
+{% endblock %}
+
+{% block extra_javascript %}{% endblock %}

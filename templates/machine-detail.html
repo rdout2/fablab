@@ -1,0 +1,96 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block extra_css %}{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'layout/header-2.html' %}
+
+
+
+
+<!--Breadcrumb Start-->
+<div class="pq-breadcrumb pq-bg-dark pq-bg-img-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <div class="pq-breadcrumb-title">
+                        <h1>{{ machine.name|title }}</h1>
+                    </div>
+                    <div class="pq-breadcrumb-container">
+                        <ol class="breadcrumb align-items-center">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home me-2"></i>Acceuil</a>
+                            </li>
+                            <li class="breadcrumb-item active">{{machine.name}}</li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Breadcrumb End-->
+ <!--Portfolio-Single Start-->
+ <section class="portfolio-single pq-pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <img src="{{machine.image.url }}" alt="">
+            </div>
+            <div class="col-lg-4">
+                <div class="pq-portfolio-info-box">
+                    <div class="pq-porfolio-info-header">
+                        <h5 class="mt-4 mt-lg-0">{{machine.name}}</h5>
+                        <p>                                                                                                                                                                        </p>
+                        <div class="pq-porfolio-info">
+                            <ul class="pq-info-list">
+                                <li>
+                                    <h5>categories </h5>
+                                    <span>{{machine.category}}</span>
+                                </li>
+                                <li>
+                                    <h5>Quantité</h5>
+                                    <span>{{machine.quantite}}</span>
+                                </li>
+                                {% if machine.active %}
+
+                                <li>
+                                    <h5>Pré-requis:</h5>
+                                    <span>Suivre l’atelier d’initiation :<a href="{% url 'Prerequis' machine.slug %}" class="pq-portfolio-link" > {{machine.Prerequis}} </a> </span>
+                                </li>
+                                {% endif %}
+
+                                <!-- <li>
+                                    <h5>Date</h5>
+                                    <span>March 10, 2021</span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-lg-12">
+                <h2 class="pq-portfolio-single-title">{{machine.name}}</h2>
+            <div class="col-lg-12">
+                
+                <p> {{machine.description|safe}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Portfolio-Single End-->
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block extra_javascript %}{% endblock %}

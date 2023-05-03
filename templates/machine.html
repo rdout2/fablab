@@ -1,0 +1,96 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block extra_css %}{% endblock %}
+{% block content %}
+{% include 'layout/header-2.html' %}
+
+
+<!--Breadcrumb Start-->
+<div class="pq-breadcrumb pq-bg-dark pq-bg-img-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <div class="pq-breadcrumb-title">
+                        <h1>Nos Machines  </h1>
+                    </div>
+                    <div class="pq-breadcrumb-container">
+                        <ol class="breadcrumb align-items-center">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home me-2"></i>Acceuil</a>
+                            </li>
+                            <li class="breadcrumb-item active">Nos Machines </li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Breadcrumb End-->
+
+
+
+<!--Portfolio Start-->
+<section class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pq-grid-container">
+                    <div class="pq-filters">
+                        <div class="filters pq-filter-button-group">
+                            <ul>
+                                <li class="active pq-filter-btn" data-filter="*">All</li>
+                                {% for category in categories %}
+                                        <li class="pq-filter-btn" data-filter=".{{ category.slug }}">{{ category.name }}</li>
+                                    <!-- <li class="pq-filter-btn" data-filter="*"> <a href="{% url 'machine' %}?filter={{category.slug}}" >{{ category.name }} </a> </li> -->
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="pq-grid " data-next_items="3" data-initial_items="6">
+                        {% for post in machines %}
+                        <div class="pq-grid-item pq-filter-items pq-col-4  pq-crop-img {{ post.category.slug }} ">
+                            
+                            <div class="pq-portfoliobox-2">
+                                
+                                <div class="pq-portfolio-img">
+                                    <a href="#">
+                                        <img src="{{ post.image.url }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="pq-portfolio-info">
+                                    <div class="pq-portfolio-link">
+                                        <a href="">Mos Machines</a>
+                                        <a href="">{{ post.category.name }}</a>
+                                    </div>
+                                    <h5><a href="{% url 'machine_detail' post.slug %}" >{{post.name}}</a></h5>
+                                </div>
+                                
+                            </div>
+                           
+                        </div>
+                        {% endfor %}
+                    </div>
+                   
+                </div>
+                <!-- <div class="text-center">
+                    <a href="#" class="pq-button" id="showMore">
+                        <div class="pq-button-block">
+                            <span class="pq-button-text">Voir PLus</span>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--Portfolio End-->
+
+
+
+
+{% endblock %}
+
+{% block extra_javascript %}{% endblock %}

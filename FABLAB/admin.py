@@ -66,6 +66,17 @@ class GaleryAdmin(admin.ModelAdmin):
         model = Galery
 admin.site.register(Galery, GaleryAdmin)
 
+class BlogCommentAdmin(admin.ModelAdmin):
+    date_hierarchy      = 'timestamp'
+    list_display        = [ 'email','first_name', 'last_name','message', 'active', 'timestamp']
+    list_display_links  = ['email',]
+    list_filter         = ['email']
+    search_fields       = ['email',]
+    list_per_page       = 25
+    class Meta:
+        model = BlogComment
+admin.site.register(BlogComment, BlogCommentAdmin)
+
 class BlogAdmin(admin.ModelAdmin):
     date_hierarchy      = 'timestamp'
     list_display        = ['name', 'active', 'timestamp', 'updated']
@@ -125,7 +136,7 @@ admin.site.register(Trustpilot, TrustpilotAdmin)
 
 class AdmissionAdmin(admin.ModelAdmin):
     date_hierarchy      = 'timestamp'
-    list_display        = ['email', 'first_name','Training', 'last_name', 'active', 'timestamp']
+    list_display        = ['email', 'first_name','training', 'last_name', 'active', 'timestamp']
     list_display_links  = ['email',]
     list_filter         = ['email']
     search_fields       = ['email', 'first_name', 'last_name']
