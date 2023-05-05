@@ -3,7 +3,8 @@
 {% block title %}Home{% endblock %}
 {% block extra_css %}{% endblock %}
 {% block content %}
-	{% include 'layout/header.html' %}
+{% include 'layout/header.html' %}
+{% load active_link_tags %}
     <!--Banner Start-->
     <div class="banner py-0">
         <!-- START home 2 REVOLUTION SLIDER 6.3.2 -->
@@ -14,7 +15,7 @@
                 <rs-slides>
                     <rs-slide data-key="rs-43" data-title="Slide" data-thumb="rev/assets/banner-1-1-50x100.jpg"
                         data-anim="ei:d;eo:d;s:d;r:default;t:crossfade;sl:d;">
-                        <img src="{% static 'assets/rev/assets/banner-1-1.jpg' %}" title="banner-1-1.jpg" width="1920"
+                        <img src="{% static 'assets/rev/assets/331000539_935518177605812_8407632586406166714_n.jpg' %}" title="banner-1-1.jpg" width="1920"
                             height="1080" data-panzoom="d:10000ms;e:power0.in;ss:120%;se:100%;bs:0px;os:0px/0;"
                             class="rev-slidebg" data-no-retina>
                         <!--
@@ -23,11 +24,11 @@
                             data-xy="x:c;xo:-2px,-1px,0,0;y:m;yo:0,0,0,-10px;"
                             data-text="w:normal;s:120,94,71,43;l:128,100,75,46;ls:20px,15px,11px,6px;fw:600;a:center;"
                             data-frame_0="y:50,39,29,17;" data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
-                            style="z-index:10;font-family:Jost;">DIGITAL<br>
-                            PERFECTION
+                            style="z-index:10;font-family:Jost;">LABORATOIRE<br>
+                            DE FABRICATION 
                         </h5><!--
 
-							--><a id="slider-15-slide-43-layer-2" class="rs-layer rev-btn" href="about-us.html" target="_self"
+							--><a id="slider-15-slide-43-layer-2" class="rs-layer rev-btn" href="{% url 'apropos' %}" target="_self"
                             data-type="button" data-rsp_ch="on"
                             data-xy="x:c;xo:-90px,-90px,-75px,-58px;y:m;yo:200px,160px,121px,74px;"
                             data-text="w:normal;s:16,16,16,14;l:32,32,24,22;" data-dim="minh:0px,none,none,none;"
@@ -35,10 +36,10 @@
                             data-border="bor:5px,5px,5px,5px;" data-frame_0="y:50,39,29,17;"
                             data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
                             data-frame_hover="c:#222;bgc:#fff;bor:5px,5px,5px,5px;bri:120%;"
-                            style="z-index:11;background-color:#fd4a18;font-family:Jost;">Read More
+                            style="z-index:11;background-color:#fd4a18;font-family:Jost;">Savoir Plus 
                         </a><!--
 
-							--><a id="slider-15-slide-43-layer-3" class="rs-layer rev-btn" href="contact-us.html" target="_self"
+							--><a id="slider-15-slide-43-layer-3" class="rs-layer rev-btn" href="{% url 'contact' %}" target="_self"
                             data-type="button" data-color="#222222" data-rsp_ch="on"
                             data-xy="x:c;xo:100px,106px,94px,72px;y:m;yo:200px,160px,121px,74px;"
                             data-text="w:normal;s:16,16,16,14;l:32,32,24,22;" data-dim="minh:0px,none,none,none;"
@@ -46,20 +47,21 @@
                             data-border="bor:5px,5px,5px,5px;" data-frame_0="y:50,39,29,17;"
                             data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
                             data-frame_hover="c:#fff;bgc:#fd4a18;bor:5px,5px,5px,5px;sp:100;e:power1.inOut;bri:120%;"
-                            style="z-index:12;background-color:#ffffff;font-family:Jost;">Contact Us
+                            style="z-index:12;background-color:#ffffff;font-family:Jost;">Nous Contacter
+
                         </a><!--
 
 							--><rs-layer id="slider-15-slide-43-layer-7" data-type="text" data-color="#fd4a18" data-rsp_ch="on"
                             data-xy="x:c;y:m;yo:-160px,-126px,-95px,-80px;"
                             data-text="w:normal;s:18,18,16,16;l:26,26,24,24;ls:3px,2px,1px,0px;fw:600;"
                             data-frame_0="y:50,39,29,17;" data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
-                            style="z-index:13;font-family:Jost;"># SECURE & IT SERVICES
+                            style="z-index:13;font-family:Jost;"># GRANDE  EXPERIENCE EN INFORMATIQUE
                         </rs-layer><!--
 -->
                     </rs-slide>
                     <rs-slide data-key="rs-44" data-title="Slide" data-thumb="rev/assets/banner-2-1-50x100.jpg"
                         data-anim="ei:d;eo:d;s:d;r:default;t:crossfade;sl:d;">
-                        <img src="{% static 'assets/rev/assets/banner-2-1.jpg' %}" title="banner-2-1.jpg" width="1920"
+                        <img src="{% static 'assets/rev/assets/331321185_555318589881770_8484293986516634994_n.jpg' %}" title="banner-2-1.jpg" width="1920"
                             height="1080" data-panzoom="d:10000ms;e:power0.in;ss:120%;se:100%;bs:0px;os:0px/0;"
                             class="rev-slidebg" data-no-retina>
                         <!--
@@ -68,11 +70,11 @@
                             data-xy="x:c;xo:-2px,-1px,0,0;y:m;yo:0,0,0,-10px;"
                             data-text="w:normal;s:120,94,71,43;l:128,100,75,46;ls:20px,15px,11px,6px;fw:600;a:center;"
                             data-frame_0="y:50,39,29,17;" data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
-                            style="z-index:10;font-family:Jost;">SPLENDID<br>
+                            style="z-index:10;font-family:Jost;">INNOVATION<br>
                             TECHNOLOGIES
                         </h5><!--
 
-							--><a id="slider-15-slide-44-layer-2" class="rs-layer rev-btn" href="about-us.html" target="_self"
+							--><a id="slider-15-slide-44-layer-2" class="rs-layer rev-btn" href="{% url 'apropos' %}" target="_self"
                             data-type="button" data-rsp_ch="on"
                             data-xy="x:c;xo:-100px,-90px,-74px,-66px;y:m;yo:200px,160px,121px,74px;"
                             data-text="w:normal;s:16;l:32,32,24,24;" data-dim="minh:0px,none,none,none;"
@@ -80,10 +82,10 @@
                             data-border="bor:5px,5px,5px,5px;" data-frame_0="y:50,39,29,17;"
                             data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
                             data-frame_hover="c:#222;bgc:#fff;bor:5px,5px,5px,5px;bri:120%;"
-                            style="z-index:11;background-color:#fd4a18;font-family:Jost;">Read More
+                            style="z-index:11;background-color:#fd4a18;font-family:Jost;">Savoir Plus
                         </a><!--
 
-							--><a id="slider-15-slide-44-layer-3" class="rs-layer rev-btn" href="contact-us.html" target="_self"
+							--><a id="slider-15-slide-44-layer-3" class="rs-layer rev-btn" href="{% url 'contact' %}" target="_self"
                             data-type="button" data-color="#222222" data-rsp_ch="on"
                             data-xy="x:c;xo:100px,106px,96px,72px;y:m;yo:200px,160px,121px,74px;"
                             data-text="w:normal;s:16;l:32,32,24,24;" data-dim="minh:0px,none,none,none;"
@@ -91,14 +93,14 @@
                             data-border="bor:5px,5px,5px,5px;" data-frame_0="y:50,39,29,17;"
                             data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
                             data-frame_hover="c:#fff;bgc:#fd4a18;bor:5px,5px,5px,5px;sp:100;e:power1.inOut;bri:120%;"
-                            style="z-index:12;background-color:#ffffff;font-family:Jost;">Contact Us
+                            style="z-index:12;background-color:#ffffff;font-family:Jost;">Nous contacter
                         </a><!--
 
 							--><rs-layer id="slider-15-slide-44-layer-7" data-type="text" data-color="#fd4a18" data-rsp_ch="on"
                             data-xy="x:c;xo:0,0,1px,0;y:m;yo:-160px,-126px,-100px,-80px;"
                             data-text="w:normal;s:18,18,16,16;l:26,26,24,24;ls:3px,2px,1px,0px;fw:600;"
                             data-frame_0="y:50,39,29,17;" data-frame_1="st:1000;sp:1000;" data-frame_999="o:0;st:w;"
-                            style="z-index:13;font-family:Jost;"># GREAT EXPERIENCE IN IT
+                            style="z-index:13;font-family:Jost;"># INFORMATIQUE & ELECTRONINQUE
                         </rs-layer><!--
 -->
                     </rs-slide>
@@ -117,38 +119,13 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8">
                     <div class="pq-section pq-style-1 text-left">
-                        <span class="pq-section-sub-title"># we have more than it solutions.</span>
-                        <h5 class="pq-section-title" id="relationships" data-high_text="Relationships"
-                            data-title_text="We Deliver Solution With The Goal Of Trusting Relationships"
-                            data-rough_color="#fd4a18" data-rough_type="underline">We Deliver Solution With The Goal Of
-                            Trusting Relationships</h5>
-                        <p class="pq-section-description">It is a long established fact that a reader will be distracted
-                            by the readable content of a page when looking at its layout. Lorem Ipsum is simply dummy
-                            text of the printing and typesetting industry.</p>
+                        <span class="pq-section-sub-title"># NOUS AVONS PLUS QUE DES SOLUTIONS INFORMATIQUES.</span>
+                        <h5 class="pq-section-title" id="apprendre" data-high_text="Apprendre"
+                            data-title_text=""
+                            data-rough_color="#fd4a18" data-rough_type="underline">Un lieu ouvert à tous pour apprendre, collaborer et produire</h5>
+                        <p class="pq-section-description">FABLAB DE NDJAMENA est un laboratoire de fabrication numérique accessible à tout le monde. Venez nous rendre visite durant nos heures d’ouverture pour découvrir les lieux et les activités..</p>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="pq-fancy-box pq-fancybox-8">
-                                <div class="pq-fancy-media">
-                                    <div class="pq-fancy-icon">
-                                        <i class="flaticon-marketing"></i>
-                                    </div>
-                                    <div class="pq-fancy-box-meta">
-                                        <span class="pq-fancy-box-subtitle">explore the service</span>
-                                        <h4 class="pq-fancybox-title">App Development</h4>
-                                    </div>
-                                </div>
-                                <p class="pq-fancy-box-info"> It is a long established fact that a reader will be
-                                    distracted by the readable content.</p>
-                                <div class="pq-btn-container">
-                                    <div class="pq-button-block">
-                                        <a href="#" class="pq-button pq-btn-link">
-                                            <span class="pq-button-text">Read More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
                             <div class="pq-fancy-box pq-fancybox-8">
                                 <div class="pq-fancy-media">
@@ -156,16 +133,36 @@
                                         <i class="flaticon-call-center"></i>
                                     </div>
                                     <div class="pq-fancy-box-meta">
-                                        <span class="pq-fancy-box-subtitle">explore the service</span>
-                                        <h4 class="pq-fancybox-title">Web Development</h4>
+                                        <span class="pq-fancy-box-subtitle">Explore Nos Machines</span>
+                                        <h4 class="pq-fancybox-title">Nos Machines</h4>
                                     </div>
                                 </div>
-                                <p class="pq-fancy-box-info"> It is a long established fact that a reader will be
-                                    distracted by the readable content.</p>
+                                <p class="pq-fancy-box-info"> Pour découper,graver,créer des objets 3d en plastique,tester des circuitsscier, percer, coller, assemble du bois ou du plastique  ..</p>
                                 <div class="pq-btn-container">
                                     <div class="pq-button-block">
-                                        <a href="#" class="pq-button pq-btn-link">
-                                            <span class="pq-button-text">Read More</span>
+                                        <a href="{% url 'machine' %}" class="pq-button pq-btn-link">
+                                            <span class="pq-button-text">Savoir Plus</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="pq-fancy-box pq-fancybox-8">
+                                <div class="pq-fancy-media">
+                                    <div class="pq-fancy-icon">
+                                        <i class="flaticon-marketing"></i>
+                                    </div>
+                                    <div class="pq-fancy-box-meta">
+                                        <span class="pq-fancy-box-subtitle">Explore Nos Formations</span>
+                                        <h4 class="pq-fancybox-title">Nos Formations</h4>
+                                    </div>
+                                </div>
+                                <p class="pq-fancy-box-info"> Apprendre comment fonctionne une imprimantes 3d ce qu'est Arduino , les logiciels utilisables, les règles à respecter  ..</p>
+                                <div class="pq-btn-container">
+                                    <div class="pq-button-block">
+                                        <a href="{% url 'training' %}" class="pq-button pq-btn-link">
+                                            <span class="pq-button-text">Savoir Plus</span>
                                         </a>
                                     </div>
                                 </div>
@@ -175,43 +172,43 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mt-4 mt-xl-0">
                     <div class="pq-list-box">
-                        <h5 class="pq-section-title pq-text-white" id="business" data-high_text="Business"
-                            data-title_text="Best Agency Business" data-rough_color="#fd4a18"
-                            data-rough_type="underline">Best Agency Business</h5>
+                        <h5 class="pq-section-title pq-text-white" id="FABLAB" data-high_text="FABLAB"
+                            data-title_text="1er FABLAB au Tchad" data-rough_color="#fd4a18"
+                            data-rough_type="underline">1er FABLAB au Tchad</h5>
                         <ul class="pq-list-check">
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">Web Development</span>
+                                <span class="pq-text-white">Conseil en informatique</span>
                             </li>
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">Mobile Development</span>
+                                <span class="pq-text-white">Modelisation 2D</span>
                             </li>
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">UX/UI Design</span>
+                                <span class="pq-text-white">Modelisation 3D</span>
                             </li>
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">It Consultancy</span>
+                                <span class="pq-text-white">Fabriquation</span>
                             </li>
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">Product Engineering</span>
+                                <span class="pq-text-white">Apprendretissage</span>
                             </li>
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">Business Security</span>
+                                <span class="pq-text-white">Devollopement Mobil & web</span>
                             </li>
                             <li class="pq-list-item">
                                 <a href="#"><i class="ion ion-android-done-all"></i></a>
-                                <span class="pq-text-white">Managed IT Services</span>
+                                <span class="pq-text-white">Entreprendre</span>
                             </li>
                         </ul>
                     </div>
                     <div class="experience">
                         <h5 class="pq-experience-title">
-                            <a href="#" class="pq-text-white">25+ Year Experience</a>
+                            <a href="{% url 'apropos' %}" class="pq-text-white">+9 Ans D'experiences</a>
                         </h5>
                     </div>
                 </div>
@@ -304,11 +301,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="pq-section pq-style-1 text-center">
-                        <span class="pq-section-sub-title"># our growth business</span>
+                        <span class="pq-section-sub-title"># Notre activité en croissance</span>
                         <h5 class="pq-section-title pq-text-white" id="company" data-high_text="Company"
                             data-title_text="Intelligence And Collaboration IT Company Service."
-                            data-rough_color="#fd4a18" data-rough_type="underline">Intelligence And Collaboration IT
-                            Company Service.</h5>
+                            data-rough_color="#fd4a18" data-rough_type="underline">Pour concrétiser vos projets</h5>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6">
@@ -319,8 +315,8 @@
                             </span>
                         </div>
                         <div class="pq-icon-box-content">
-                            <h4 class="pq-icon-box-title">Cloud DevOps</h4>
-                            <p class="pq-icon-box-description">There are many variaons of passages Lorem</p>
+                            <h4 class="pq-icon-box-title">Entreprendre</h4>
+                            <p class="pq-icon-box-description">Le FABLAB offre un programme d’adhésion et d’accompagnement spécifiques pour les professionnels. Il aide les entreprises à concevoir, prototyper et réaliser leurs projets innovants.</p>
                         </div>
                     </div>
                 </div>
@@ -332,8 +328,8 @@
                             </span>
                         </div>
                         <div class="pq-icon-box-content">
-                            <h4 class="pq-icon-box-title">Data Center</h4>
-                            <p class="pq-icon-box-description">There are many variaons of passages Lorem</p>
+                            <h4 class="pq-icon-box-title">Fabriquer</h4>
+                            <p class="pq-icon-box-description">Au sein du Lab vous trouverez des équipements et outils de qualité professionnelle (imprimante 3D, découpe laser, brodeuse numérique… ). Le principe du fablab c’est de faire soi-même (DIY) et s’entraider.</p>
                         </div>
                     </div>
                 </div>
@@ -345,8 +341,8 @@
                             </span>
                         </div>
                         <div class="pq-icon-box-content">
-                            <h4 class="pq-icon-box-title">Product Design</h4>
-                            <p class="pq-icon-box-description">There are many variaons of passages Lorem</p>
+                            <h4 class="pq-icon-box-title">Apprendre</h4>
+                            <p class="pq-icon-box-description">LE FABLAB propose des ateliers d’initiation pour rendre autonomes les « makers » dans la réalisation de leurs projets. Ils sont obligatoires pour pouvoir utiliser en solo les machines à disposition.</p>
                         </div>
                     </div>
                 </div>
@@ -358,8 +354,8 @@
                             </span>
                         </div>
                         <div class="pq-icon-box-content">
-                            <h4 class="pq-icon-box-title">Digital Services</h4>
-                            <p class="pq-icon-box-description">There are many variaons of passages Lorem</p>
+                            <h4 class="pq-icon-box-title">Partager</h4>
+                            <p class="pq-icon-box-description">Dans son local FABLAB  met à disposition des espaces de travail où les membres viennent collaborer ensemble sur des projets en partageant leurs compétences et leurs savoirs dans la bonne humeur.</p>
                         </div>
                     </div>
                 </div>
@@ -368,446 +364,62 @@
     </section>
     <!--Growth End-->
 
-    <!--Benefits Start-->
-    <!-- <section class="pq-mt-90 py-0">
-        <div class="container">
-            <div class="row pq-bg-primary align-items-center">
-                <div class="col-xl-6 pe-xl-4 pq-primary-section-side-left">
-                    <div class="pq-section pq-style-1 text-left">
-                        <span class="pq-section-sub-title pq-text-white"># our benefits</span>
-                        <h5 class="pq-section-title pq-text-white" id="challanges" data-high_text="Challenges"
-                            data-title_text="Solve Business Challenges With IT" data-rough_color="#ffffff"
-                            data-rough_type="underline">Solve Business Challenges With IT</h5>
-                        <p class="pq-section-description pq-text-white">There are many variations of passages of Lorem
-                            Ipsum available, but majority have suffered alteration in some form, by injected humour</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <ul class="pq-list-check mb-0">
-                                <li class="pq-list-item">
-                                    <i class="ion ion-checkmark-circled"></i>
-                                    <span class="pq-text-white">There are many variations</span>
-                                </li>
-                                <li class="pq-list-item">
-                                    <i class="ion ion-checkmark-circled"></i>
-                                    <span class="pq-text-white">Contrary to popular belief</span>
-                                </li>
-                                <li class="pq-list-item">
-                                    <i class="ion ion-checkmark-circled"></i>
-                                    <span class="pq-text-white">Sed scelerisque massa quis</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <ul class="pq-list-check">
-                                <li class="pq-list-item">
-                                    <i class="ion ion-checkmark-circled"></i>
-                                    <span class="pq-text-white">It is a long established that</span>
-                                </li>
-                                <li class="pq-list-item">
-                                    <i class="ion ion-checkmark-circled"></i>
-                                    <span class="pq-text-white">The standard chunk of Lorem</span>
-                                </li>
-                                <li class="pq-list-item">
-                                    <i class="ion ion-checkmark-circled"></i>
-                                    <span class="pq-text-white">Fusce venenatis orci quis</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="pq-text-white">Call To Book Appoinment <strong>987 654 3210</strong></p>
-                    <a href="home-modern.html" class="pq-button pq-bg-dark">
-                        <div class="pq-button-block">
-                            <span class="pq-button-text pq-text-white">Check Services</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xl-6 mt-4 mt-xl-0 p-xl-0">
-                    <img src="{% static 'assets/images/benefits/2.jpg' %}" class="rounded" alt="benefits-img">
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--Benefits End-->
+    
 
-    <!--Process Start-->
-    <section class="process-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="pq-section pq-style-1 text-center">
-                        <span class="pq-section-sub-title"># our values and goals</span>
-                        <h5 class="pq-section-title" id="process" data-high_text="Process"
-                            data-title_text="Our Work Process" data-rough_color="#fd4a18" data-rough_type="underline">
-                            Our Work Process</h5>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="pq-process-step pq-process-1">
-                        <img class="pq-before-img-1" src="{% static 'assets/images/arrow-1.png' %}" alt="arrow-img">
-                        <div class="pq-process-icon">
-                            <i class="flaticon-technical-support"></i>
-                            <span class="pq-process-number">01</span>
-                        </div>
-                        <div class="pq-process-info">
-                            <h5 class="pq-process-title">Choose a Service</h5>
-                            <p class="pq-process-description">There are many variations of passages of Lorem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mt-4 mt-md-0">
-                    <div class="pq-process-step pq-process-2">
-                        <img class="pq-before-img-2" src="{% static 'assets/images/arrow-2.png' %}" alt="arrow-img">
-                        <div class="pq-process-icon">
-                            <i class=" flaticon-admin"></i>
-                            <span class="pq-process-number">02</span>
-                        </div>
-                        <div class="pq-process-info">
-                            <h5 class="pq-process-title">Request a Meeting</h5>
-                            <p class="pq-process-description">There are many variations of passages of Lorem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mt-4 mt-lg-0">
-                    <div class="pq-process-step pq-process-1">
-                        <img class="pq-before-img-3" src="{% static 'assets/images/arrow-1.png' %}" alt="arrow-img">
-                        <div class="pq-process-icon">
-                            <i class="flaticon-globe"></i>
-                            <span class="pq-process-number">03</span>
-                        </div>
-                        <div class="pq-process-info">
-                            <h5 class="pq-process-title">Start Planing</h5>
-                            <p class="pq-process-description">There are many variations of passages of Lorem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mt-4 mt-xl-0">
-                    <div class="pq-process-step pq-process-2">
-                        <div class="pq-process-icon">
-                            <i class="flaticon-laptop"></i>
-                            <span class="pq-process-number">04</span>
-                        </div>
-                        <div class="pq-process-info">
-                            <h5 class="pq-process-title">Lets Make it Happen</h5>
-                            <p class="pq-process-description">There are many variations of passages of Lorem</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Process End-->
-
-    <!--Team Start-->
-    <section class="our-team pq-bg-grey pq-bg-img-1 exclusive">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="pq-section pq-style-1 text-center">
-                        <span class="pq-section-sub-title"># expert team</span>
-                        <h5 class="pq-section-title" id="members" data-high_text="Members"
-                            data-title_text="Our Team Members" data-rough_color="#fd4a18" data-rough_type="underline">
-                            Our Team Members</h5>
-                    </div>
-                    <div class="pq-team">
-                        <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="false"
-                            data-desk_num="3" data-lap_num="3" data-tab_num="2" data-mob_num="1" data-mob_sm="1"
-                            data-autoplay="true" data-loop="true" data-margin="30">
-                            <div class="item">
-                                <div class="pq-teambox-1">
-                                    <div class="pq-team-img">
-                                        <img src="{% static 'assets/images/team/2.jpg' %}" alt="team-image">
-                                    </div>
-                                    <div class="pq-team-info pq-bg-white">
-                                        <h5>Alex Jhon Martin</h5>
-                                        <span class="pq-team-designation pq-text-primary">Web Designer</span>
-                                        <div class="pq-team-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-teambox-1">
-                                    <div class="pq-team-img">
-                                        <img src="{% static 'assets/images/team/3.jpg' %}" alt="team-image">
-                                    </div>
-                                    <div class="pq-team-info pq-bg-white">
-                                        <h5>Alex Jhon Martin</h5>
-                                        <span class="pq-team-designation pq-text-primary">Web Designer</span>
-                                        <div class="pq-team-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-teambox-1">
-                                    <div class="pq-team-img">
-                                        <img src="{% static 'assets/images/team/4.jpg' %}" alt="team-image">
-                                    </div>
-                                    <div class="pq-team-info pq-bg-white">
-                                        <h5>Alex Jhon Martin</h5>
-                                        <span class="pq-team-designation pq-text-primary">Web Designer</span>
-                                        <div class="pq-team-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-teambox-1">
-                                    <div class="pq-team-img">
-                                        <img src="{% static 'assets/images/team/5.jpg' %}" alt="team-image">
-                                    </div>
-                                    <div class="pq-team-info pq-bg-white">
-                                        <h5>Alex Jhon Martin</h5>
-                                        <span class="pq-team-designation pq-text-primary">Web Designer</span>
-                                        <div class="pq-team-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-teambox-1">
-                                    <div class="pq-team-img">
-                                        <img src="{% static 'assets/images/team/6.jpg' %}" alt="team-image">
-                                    </div>
-                                    <div class="pq-team-info pq-bg-white">
-                                        <h5>Alex Jhon Martin</h5>
-                                        <span class="pq-team-designation pq-text-primary">Web Designer</span>
-                                        <div class="pq-team-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="pq-teambox-1">
-                                    <div class="pq-team-img">
-                                        <img src="{% static 'assets/images/team/7.jpg' %}" alt="team-image">
-                                    </div>
-                                    <div class="pq-team-info pq-bg-white">
-                                        <h5>Alex Jhon Martin</h5>
-                                        <span class="pq-team-designation pq-text-primary">Web Designer</span>
-                                        <div class="pq-team-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Team End-->
-
-	    <!--Award Start-->
-		<!-- <section class="award">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12"> -->
-						<!-- <div class="pq-section pq-style-1 text-center">
-							<span class="pq-section-sub-title"># award nominees</span>
-							<h5 class="pq-section-title" id="awards" data-high_text="Awards"
-								data-title_text="Business And Industry Awards Programs" data-rough_color="#fd4a18"
-								data-rough_type="underline">Business And Industry Awards Programs</h5>
-						</div>
+    
+    
 	
-						<div class="pq-award"> -->
-							<!-- <div class="owl-carousel owl-loaded owl-drag" data-dots="false" data-nav="false"
-								data-desk_num="5" data-lap_num="4" data-tab_num="3" data-mob_num="1" data-mob_sm="1"
-								data-autoplay="true" data-loop="true" data-margin="0">
-								<div class="item">
-									<div class="pq-awardbox-1">
-										<a href="#">
-											<img class="pq-award-img" src="{% static 'assets/images/award/1.png' %}"
-												alt="award-img">
-											<span class="pq-award-title">Clutch</span>
-										</a>
-									</div>
-								</div>
-								<div class="item">
-									<div class="pq-awardbox-1">
-										<a href="#">
-											<img class="pq-award-img" src="{% static 'assets/images/award/2.png' %}"
-												alt="award-img">
-											<span class="pq-award-title">Development company</span>
-										</a>
-									</div>
-								</div>
-								<div class="item">
-									<div class="pq-awardbox-1">
-										<a href="#">
-											<img class="pq-award-img" src="{% static 'assets/images/award/3.svg' %}"
-												alt="award-img">
-											<span class="pq-award-title">Upcity Marketplace</span>
-										</a>
-									</div>
-								</div>
-								<div class="item">
-									<div class="pq-awardbox-1">
-										<a href="#">
-											<img class="pq-award-img" src="{% static 'assets/images/award/4.png' %}"
-												alt="award-img">
-											<span class="pq-award-title">Top Developer</span>
-										</a>
-									</div>
-								</div>
-							</div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--Award End-->
-	
-		<!--Testimonial Start-->
+	<!--Testimonial Start-->
 		<section class="pq-bg-dark pq-bg-img-2">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="pq-section pq-style-1 text-center">
-							<span class="pq-section-sub-title pq-text-white"># our testimonial</span>
+							<span class="pq-section-sub-title pq-text-white"># NOTRE TÉMOIGNAGE</span>
 							<h5 class="pq-section-title pq-text-white" id="solution" data-high_text="Solutions."
 								data-title_text="Clinets Happy Our IT Solutions." data-rough_color="#fd4a18"
-								data-rough_type="underline">Clinets Happy Our IT Solutions.</h5>
+								data-rough_type="underline">ils sont safisfait de nous.</h5>
 						</div>
 					</div>
-	
+                    
 					<div class="pq-testimonial pq-owl-testimonial-2">
 						<div class="owl-carousel owl-loaded owl-drag" data-dots="true" data-nav="false" data-desk_num="2"
 							data-lap_num="2" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
 							data-loop="true" data-margin="30">
+                            {% for post in testimonials %}
 							<div class="item">
+                                
 								<div class="pq-testimonial-box pq-owl-testimonial-style-2">
 									<div class="pq-testmonial-media">
-										<img src="{% static 'assets/images/testimonial/carousel/1.jpg' %}"
+										<img src="{{post.image.url }}"
 											alt="testimonial-image">
 										<div class="pq-testimonial-info">
-											<h5>John Martin</h5>
-											<span>Software Developer</span>
+											<h5>{{post.first_name}}</h5>
+											<span>{{post.profession}}</span>
 										</div>
 									</div>
 									<div class="pq-testimonial-meta">
 										<div class="pq-testimonial-content">
-											<p>There are many variations of passages of Lorem Ipsum available, but the
-												majority
-												have suffered
-												alteration in some form, by injected humour, or randomised words which don’t
-												look .</p>
+											<p>{{post.comment|safe|truncatechars:200}}.</p>
 										</div>
-										<div class="pq-testimonial-star">
+										<!-- <div class="pq-testimonial-star">
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
-										</div>
+										</div> -->
 										<div class="pq-quote">
 											<i class="fa fa-quote-right" aria-hidden="true"></i>
 										</div>
 									</div>
 								</div>
+                               
 							</div>
-							<div class="item">
-								<div class="pq-testimonial-box pq-owl-testimonial-style-2">
-									<div class="pq-testmonial-media">
-										<img src="{% static 'assets/images/testimonial/carousel/2.jpg' %}"
-											alt="testimonial-image">
-										<div class="pq-testimonial-info">
-											<h5>Alexa John Martin</h5>
-											<span>Android Developer</span>
-										</div>
-									</div>
-									<div class="pq-testimonial-meta">
-										<div class="pq-testimonial-content">
-											<p>There are many variations of passages of Lorem Ipsum available, but the
-												majority
-												have suffered
-												alteration in some form, by injected humour, or randomised words which don’t
-												look .</p>
-										</div>
-										<div class="pq-testimonial-star">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="pq-quote">
-											<i class="fa fa-quote-right" aria-hidden="true"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="pq-testimonial-box pq-owl-testimonial-style-2">
-									<div class="pq-testmonial-media">
-										<img src="{% static 'assets/images/testimonial/carousel/3.jpg' %}"
-											alt="testimonial-image">
-										<div class="pq-testimonial-info">
-											<h5>Naidan Smith</h5>
-											<span>Manager </span>
-										</div>
-									</div>
-									<div class="pq-testimonial-meta">
-										<div class="pq-testimonial-content">
-											<p>There are many variations of passages of Lorem Ipsum available, but the
-												majority
-												have suffered
-												alteration in some form, by injected humour, or randomised words which don’t
-												look .</p>
-										</div>
-	
-										<div class="pq-testimonial-star">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-										</div>
-										<div class="pq-quote">
-											<i class="fa fa-quote-right" aria-hidden="true"></i>
-										</div>
-									</div>
-								</div>
-							</div>
+                            {% endfor %}					
 						</div>
 					</div>
+                    
 				</div>
 			</div>
 		</section>
@@ -931,62 +543,78 @@
 		</section -->
 		<!--Counter End-->
 	
-		<!--Blog Start-->
-		<section class="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="pq-section pq-style-1 text-center">
-							<span class="pq-section-sub-title"># our latest news</span>
-							<h5 class="pq-section-title" id="blog" data-high_text="Blog" data-title_text="Latest Blog Posts"
-								data-rough_color="#fd4a18" data-rough_type="underline">Latest Blog Posts</h5>
-						</div>
-					</div>
-					
-					<div class="col-lg-12">
-						<div class="owl-carousel owl-loaded owl-drag" data-dots="true" data-nav="false" data-desk_num="3"
-							data-lap_num="2" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
-							data-loop="true" data-margin="30">
-							<div class="item">
-								<div class="pq-blog-post">
-									<div class="pq-post-media">
-										<img src="{% static 'assets/images/blog/1.jpg' %}" alt="blog-img">
-										<div class="pq-post-date">
-											<a href="app-promotes-sales-profits-in-it-solutions.html"><span>26</span>Jan</a>
-										</div>
-									</div>
-									<div class="pq-blog-contain">
-										<div class="pq-post-meta">
-											<ul>
-												<li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-												<li class="pq-post-meta"><a
-														href="app-promotes-sales-profits-in-it-solutions.html"><i
-															class="fa fa-calendar"></i>January 2021</a>
-												</li>
-												<li class="pq-post-tag">
-													<a href="app-promotes-sales-profits-in-it-solutions.html"><i
-															class="fa fa-tag"></i>Cyber Security</a>
-												</li>
-											</ul>
-										</div>
-										<h5 class="pq-blog-title"><a
-												href="app-promotes-sales-profits-in-it-solutions.html">App promotes sales
-												&amp; profits In It Solutions</a></h5>
-										<a href="app-promotes-sales-profits-in-it-solutions.html"
-											class="pq-button pq-btn-flat pq-mt-30">
-											<div class="pq-button-block">
-												<span class="pq-button-text">Read More</span>
-											</div>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--Blog End-->
+        <!--Blog Start-->
+        <section class="blog">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <div class="pq-section pq-style-1 text-center">
+                        <span class="pq-section-sub-title"># Nos dernières actualités</span>
+                        <h5 class="pq-section-title" id="blog" data-high_text="Blog" data-title_text="Latest Blog Posts"
+                            data-rough_color="#fd4a18" data-rough_type="underline">Derniers Articles de Blog</h5>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12">
+                    <div class="owl-carousel owl-loaded owl-drag" data-dots="true" data-nav="false" data-desk_num="3"
+                        data-lap_num="2" data-tab_num="2" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
+                        data-loop="true" data-margin="30">
+                        
+                        {%for post in blogs %}
+                        <div class="item">
+                            
+                            <div class="pq-blog-post">
+                                <div class="pq-post-media">
+                                    <img src="{{ post.image.url }}" alt="{{post.name|title}}" style="width: 100%; height: 230px;">
+                                    <div class="pq-post-date">
+                                        <a href="#"><span>{{ post.timestamp|date:"d M Y" }}</span></a>
+                                    </div>
+                                </div>
+                                <div class="pq-blog-contain">
+                                    <div class="pq-post-meta">
+                                        <ul>
+                                            <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
+                                            <li class="pq-post-meta"><a
+                                                    href="#"><i
+                                                        class="fa fa-calendar"></i>{{ post.timestamp|date:"d M Y" }}</a>
+                                            </li>
+                                            <li class="pq-post-tag">
+                                                <a href="{% url 'blog'  %}"><i
+                                                        class="fa fa-tag"></i>categories :<a href= > {{ post.category }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5 class="pq-blog-title"><a
+                                            href="{% url 'blog_detail' post.slug %}">{{post.name|title}}</a></h5>
+                                    <a href="{% url 'blog_detail' post.slug %}"
+                                        class="pq-button pq-btn-flat pq-mt-30">
+                                        <div class="pq-button-block">
+                                            <span class="pq-button-text">Lire la suite</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        {% endfor %}
+                       
+                    </div>
+                    
+                
+                </div>
+                <div class="pq-btn-container mt-3" style="text-align: center;">
+                    <a href="{% url 'blog' %}" class="pq-button">
+                        <div class="pq-button-block" >
+                            <span class="pq-button-text">Voir PLus</span>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        </section>
+        <!--Blog End-->
 	
 {% endblock %}
 

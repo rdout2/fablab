@@ -40,6 +40,7 @@ pre_save.connect(presave_training_cat_slug, sender=TrainingCategory)
 
 
 class Training(models.Model) :
+    summernote_fields = '__all__'
     category = models.ForeignKey(TrainingCategory, on_delete=models.CASCADE, null=False, blank=False)
     name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
     prix = models.CharField(_("Tarif de Formation"),max_length=255, null=False, blank=False)
@@ -193,7 +194,7 @@ class Machine(models.Model):
     category = models.ForeignKey(MachineCategory, on_delete=models.CASCADE, null=False, blank=False)
     name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
     quantite = models.IntegerField(_("quantite"), null=True, blank=True)
-    Prerequis = models.ForeignKey(TrainingCategory, on_delete=models.SET_NULL, null=True, blank=True)
+    # Prerequis = models.ForeignKey(TrainingCategory, on_delete=models.SET_NULL, null=True, blank=True)
     description = models.TextField(_("Description"),null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
@@ -242,10 +243,12 @@ class Newsletter(models.Model) :
     def __str__(self):
         return (self.email)
 
-class Trustpilot(models.Model) :
+class Testimonial(models.Model) :
     first_name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
     email = models.EmailField(max_length=255, null=False, blank=False)
     comment = models.TextField(null=False, blank=False)
+    image = models.FileField(upload_to = 'media', null=False, blank=False)
+    profession = models.CharField(_("Profession"),max_length=255, null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)
     updated    = models.DateTimeField(_("Updated At"), auto_now_add=False, auto_now=True)

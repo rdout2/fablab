@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 from django.contrib import admin
 
+from django_summernote.admin import SummernoteModelAdmin
 
 from django.contrib import admin
 
@@ -32,6 +33,10 @@ class BlogCategoryAdmin(admin.ModelAdmin):
     class Meta:
         model = BlogCategory
 admin.site.register(BlogCategory, BlogCategoryAdmin)
+
+
+
+
 
 class TrainingCategoryAdmin(admin.ModelAdmin):
     date_hierarchy      = 'timestamp'
@@ -77,7 +82,11 @@ class BlogCommentAdmin(admin.ModelAdmin):
         model = BlogComment
 admin.site.register(BlogComment, BlogCommentAdmin)
 
-class BlogAdmin(admin.ModelAdmin):
+
+
+
+class BlogAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
     date_hierarchy      = 'timestamp'
     list_display        = ['name', 'active', 'timestamp', 'updated']
     list_display_links  = ['name',]
@@ -88,7 +97,9 @@ class BlogAdmin(admin.ModelAdmin):
         model = Blog
 admin.site.register(Blog, BlogAdmin)
 
-class TrainingAdmin(admin.ModelAdmin):
+
+class TrainingAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
     date_hierarchy      = 'timestamp'
     list_display        = ['name', 'active', 'timestamp', 'updated']
     list_display_links  = ['name',]
@@ -122,7 +133,7 @@ class NewsletterAdmin(admin.ModelAdmin):
         model = Newsletter
 admin.site.register(Newsletter, NewsletterAdmin)
 
-class TrustpilotAdmin(admin.ModelAdmin):
+class TestimonialAdmin(admin.ModelAdmin):
     date_hierarchy      = 'timestamp'
     list_display        = ['email','active', 'timestamp', 'updated']
     list_display_links  = ['email',]
@@ -130,8 +141,8 @@ class TrustpilotAdmin(admin.ModelAdmin):
     search_fields       = ['email',]
     list_per_page       = 25
     class Meta:
-        model = Trustpilot
-admin.site.register(Trustpilot, TrustpilotAdmin)
+        model = Testimonial
+admin.site.register(Testimonial, TestimonialAdmin)
 
 
 class AdmissionAdmin(admin.ModelAdmin):

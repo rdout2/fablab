@@ -43,7 +43,7 @@
                                     <img loading="lazy" src="{{ post.image.url }}" alt="blog-img" style="width: 100%; height: 350px;">
                                     <div class="pq-post-date">
                                         <a href="#">
-                                            <span>26</span>Jan
+                                            <span>{{ post.timestamp|date:"d M Y" }}</span>
                                         </a>
                                     </div>
                                 </div>
@@ -51,13 +51,13 @@
                                     <div class="pq-post-meta">
                                         <ul>
                                             <li class="pq-post-author"><i class="fa fa-user"></i>admin</li>
-                                            <li class="pq-post-meta"><a href="#"><i class="fa fa-calendar"></i>{{ post.timestamp|date:"d M Y" }}</a></li>
+                                            <li class="pq-post-meta"><a href="{% url 'training_detail' post.slug %}"><i class="fa fa-calendar"></i>{{ post.timestamp|date:"d M Y" }}</a></li>
                                             <li class="pq-post-tag">
-                                                <a href="#"><i class="fa fa-tag"></i>categories : {{ post.category }}</a>
+                                                <a href="{% url 'training_detail' post.slug %}"><i class="fa fa-tag"></i>categories : {{ post.category }}</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <h5 class="pq-blog-title"><a href="#">{{post.name}}</a></h5>
+                                    <h5 class="pq-blog-title"><a href="{% url 'training_detail' post.slug %}">{{post.name}}</a></h5>
                                     <p>{{post.description|safe|truncatechars:250}}</p>
                                     <div class="pq-btn-container">
                                         <a href="{% url 'training_detail' post.slug %}" class="pq-button">
@@ -78,7 +78,7 @@
                                     <ul class="page-numbers">
                                         <li><span aria-current="page" class="page-numbers current">1</span></li>
                                         <li><a class="page-numbers" href="#">2</a></li>
-                                        <li><a class="next page-numbers" href="#">Next page</a></li>
+                                        <li><a class="next page-numbers" href="#">Page suivante</a></li>
                                     </ul>
                                 </nav>
                             </div>

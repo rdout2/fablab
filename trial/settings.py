@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FABLAB',
-    'crispy_forms' # pip install django-crispy-forms
+    'crispy_forms',# pip install django-crispy-forms
+    'django_summernote',
+    'active_link',
 ]
 
 MIDDLEWARE = [

@@ -53,13 +53,13 @@
                                     <h5>Quantité</h5>
                                     <span>{{machine.quantite}}</span>
                                 </li>
-                                {% if machine.active %}
+                                
 
                                 <li>
-                                    <h5>Pré-requis:</h5>
-                                    <span>Suivre l’atelier d’initiation :<a href="{% url 'Prerequis' machine.slug %}" class="pq-portfolio-link" > {{machine.Prerequis}} </a> </span>
+                                    <h5>Pour en savoir plus </h5>
+                                    <span><a href="{% url 'training'  %}" >Voir Nos Formations</a> </span>
                                 </li>
-                                {% endif %}
+ 
 
                                 <!-- <li>
                                     <h5>Date</h5>

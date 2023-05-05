@@ -1,4 +1,5 @@
 {% load static %}
+{% load active_link_tags %}
 
 
 <!--Header Start-->
@@ -19,27 +20,27 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div id="pq-menu-contain" class="pq-menu-contain">
                                 <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                    <li class="menu-item current-menu-item manu-item-has-children">
+                                    <li class="menu-item">
                                         <a href="{% url 'home' %}">Acceuil</a>
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'apropos' css_class='current-menu-item' %}">
                                         <a href="{% url 'apropos' %}">A Propos</a>
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'machine' css_class='current-menu-item' %}">
                                         <a href="{% url 'machine' %}">Nos Machines</a>
                                          
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'training' css_class='current-menu-item' %}">
                                         <a href="{% url 'training' %}">Nos Formations</a>
                                        
                                     </li>
                                    
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'blog' css_class='current-menu-item' %}">
                                         
                                         <a href="{% url 'blog' %}">Blogs</a>
                                        
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'contact' css_class='current-menu-item' %}">
                                         <a href="{% url 'contact' %}">Contact</a>
                                     </li>
                                     
@@ -52,8 +53,8 @@
                                 <a href="tel:+180045647824">
                                     <i class="ion-ios-telephone"></i>
                                     <div class="pq-call-info">
-                                        <h5>+235 60 00 00 00 </h5>
-                                        <span>Make a call</span>
+                                        <h5>+235 63 61 44 79</h5>
+                                        <span>appelez-nous</span>
                                     </div>
                                 </a>
                             </div>

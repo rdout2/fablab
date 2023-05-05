@@ -1,4 +1,5 @@
 {% load static %}
+{% load active_link_tags %}
 
 <!--Header Start-->
 <header id="pq-header" class="pq-header-default">
@@ -19,10 +20,10 @@
                     <div class="pq-header-contact ">
                         <ul>
                             <li>
-                                <a href="tel:+180045647824"><i class="fas fa-phone-flip"></i><span>+235 60 00 00 00 </span></a>
+                                <a href="tel:+23563614479"><i class="fas fa-phone-flip"></i><span>+235 63 61 44 79</span></a>
                             </li>
                             <li>
-                                <a href="https://peacefulqode.com/cdn-cgi/l/email-protection#9feffafefcfaf9eaf3eef0fbfadff8f2fef6f3b1fcf0f2"><i class="fas fa-envelope"></i><span><span class="__cf_email__" data-cfemail="26564347454340534a5749424366414b474f4a0845494b">[email&#160;protected]</span></span></a>
+                                <a href="https://.com/cdn-cgi/l/email-protection#9feffafefcfaf9eaf3eef0fbfadff8f2fef6f3b1fcf0f2"><i class="fas fa-envelope"></i><span><span class="__cf_email__" data-cfemail="">contact@wenaklabs.org</span></span></a>
                             </li>
                         </ul>
                     </div>
@@ -36,35 +37,34 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="{% url 'home' %}">
-                            <img class="img-fluid logo" src="{% static 'assets/images/logos/fablab.png' %}" alt="techtrix">
+                            <img class="img-fluid logo" src="{% static 'assets/images/logos/fablab.png' %}" alt="">
                         </a>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div id="pq-menu-contain" class="pq-menu-contain">
                                 <ul id="pq-main-menu" class="navbar-nav ml-auto">
-                                    <li class="menu-item current-menu-item">
+                                    <li class="menu-item">
                                         <a href="{% url 'home' %}">Acceuil </a>
-                                    </li>
+                                   </li>
 
-                                    <li class="menu-item ">
+                                    <li class="menu-item {% active_link 'apropos' css_class='current-menu-item' %}">
                                          <a href="{% url 'apropos' %}">A Propos </a>
                                     </li>
                                   
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'machine' css_class='current-menu-item' %} ">
                                         <a href="{% url 'machine' %}">Nos Machines</a>
                                         
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item {% active_link 'training' css_class='current-menu-item' %}" >
                                         <a href="{% url 'training' %}">Nos Formations</a>
                                         
                                     </li>
-                                            <li>
+                                            <li class="menu-item {% active_link 'blog' css_class='current-menu-item' %}">
                                                 <a href="{% url 'blog' %}">Blogs</a>
                                             </li>
                                       
-                                            <li class="menu-item ">
+                                            <li class="menu-item {% active_link 'contact' css_class='current-menu-item' %}">
                                                  <a href="{% url 'contact' %}">Contact </a>
                                             </li>
-                                    
                                             
                                     </li>
                                 </ul>

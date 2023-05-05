@@ -22,8 +22,8 @@
                                     <i class="ti-mobile"></i>
                                     <div class="pq-footer-items-info">
                                         <h4>appelez-nous au</h4>
-                                        <a href="tel:+180045647824">
-                                            <span>+235 60 00 00 00 </span>
+                                        <a href="tel:+23563614479">
+                                            <span>+235 63 61 44 79 </span>
                                         </a>
                                     </div>
                                 </div>
@@ -36,7 +36,7 @@
                                         <a
                                             href="#"><span><span
                                                     class="__cf_email__"
-                                                    data-cfemail="23534642404645564f524c474663444e424a4f0d404c4e">[email&#160;protected]</span></span></a>
+                                                    data-cfemail="">contact@wenaklabs.org</span></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -46,10 +46,11 @@
                 <!-- footer top list -->
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-4 col-md-4">
                             <div class="widget">
                                 <img src="{% static 'assets/images/logos/fablab.png' %}" class="pq-footer-logo"
                                     alt="gym-footer-logo">
+                                <P>Atelier de fabrication numérique, qui fonctionne sur le modèle Open-space</P>
                                 <div class="pq-footer-social">
                                     <ul>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -60,47 +61,51 @@
                                 </div>
                             </div>
                         </div>
-                    >
-                        <div class="col-xl-3  col-md-6">
+                   
+                        <div class="col-xl-4  col-md-4">
                             <div class="widget">
                                 <h4 class="footer-title"> Liens</h4>
                                 <div class="menu-useful-link-container">
                                     <ul id="menu-usefull-link" class="menu">
                                         <li>
-                                            <a href="#">Aceuill</a>
+                                            <a href="{% url 'home' %}">Aceuill</a>
                                         </li>
                                         <li>
-                                            <a href="#">Nos Machines</a>
+                                            <a href="{% url 'apropos' %}">A Propos</a>
                                         </li>
                                         <li>
-                                            <a href="#">Nos Formation</a>
+                                            <a href="{% url 'machine' %}">Nos Machines</a>
                                         </li>
                                         <li>
-                                            <a href="#">Nos Blog</a>
+                                            <a href="{% url 'training' %}">Nos Formation</a>
                                         </li>
                                         <li>
-                                            <a href="#">A Propos</a>
+                                            <a href="{% url 'blog' %}">Nos Blogs</a>
                                         </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3  col-md-6">
+                        <div class="col-xl-4  col-md-4">
                             <div class="pq-widget-menu widget">
-                                <h4 class="footer-title">Article récent</h4>
-                                <div class="pq-footer-recent-post">
-                                    <div class="pq-footer-recent-post-media">
-                                        <a href="{% url 'blog' %}">
-                                            <img src="{% static 'assets/images/footer-blog/1.jpg' %}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="pq-footer-recent-post-info">
-                                        <h6><a href="app-promotes-sales-profits-in-it-solutions.html">App promotes sales
-                                                &amp; profits In It Solutions</a></h6>
-                                        <a href="app-promotes-sales-profits-in-it-solutions.html"
-                                            class="pq-post-date">January <span>26</span>, 2021 </a>
-                                    </div>
-                                </div>
+                                <h4 class="footer-title">Contact</h4>
+                                <ul id="menu-usefull-link" class="menu">
+                                    <li>
+                                        <spam>
+                                        Avenue Maldom Bada Abbas, Immeuble BSIC 2eme Etage N'Djamena - Tchad</spam> 
+                                    
+                                    </li>
+                                    <li>
+                                        Tel: +23563614479
+                                    </li>
+                                    <li>
+                                        Email: contact@wenaklabs.org
+                                    </li>
+                                       
+                                </ul>
+                                
+                                
                             </div>
                         </div>
                     </div>
