@@ -40,7 +40,7 @@ pre_save.connect(presave_training_cat_slug, sender=TrainingCategory)
 
 
 class Training(models.Model) :
-    summernote_fields = '__all__'
+
     category = models.ForeignKey(TrainingCategory, on_delete=models.CASCADE, null=False, blank=False)
     name = models.CharField(_("Nom"),max_length=255, null=False, blank=False)
     prix = models.CharField(_("Tarif de Formation"),max_length=255, null=False, blank=False)
@@ -226,7 +226,9 @@ pre_save.connect(presave_machine_slug, sender=Machine)
 
 
 
-class Galery(models.Model) :
+class Partenaire(models.Model) :
+    name = models.CharField(_("Nom"),max_length=255, null=False, blank=False, unique=True)
+    link = models.CharField(_("lien"),max_length=255)
     image = models.ImageField(upload_to = 'media', null=False, blank=False)
     active     = models.BooleanField(_("Active"), default=True)
     timestamp  = models.DateTimeField(_("Created At"), auto_now_add=True, auto_now=False)

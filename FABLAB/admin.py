@@ -60,16 +60,16 @@ class MachineCategoryAdmin(admin.ModelAdmin):
         model = MachineCategory
 admin.site.register(MachineCategory, MachineCategoryAdmin)
 
-class GaleryAdmin(admin.ModelAdmin):
+class PartenaireAdmin(admin.ModelAdmin):
     date_hierarchy      = 'timestamp'
-    list_display        = ['image', 'active', 'timestamp', 'updated']
-    list_display_links  = ['image',]
-    list_filter         = ['image']
-    search_fields       = ['image',]
+    list_display        = ['name', 'active', 'timestamp', 'updated']
+    list_display_links  = ['name',]
+    list_filter         = ['name']
+    search_fields       = ['name',]
     list_per_page       = 25
     class Meta:
-        model = Galery
-admin.site.register(Galery, GaleryAdmin)
+        model = Partenaire
+admin.site.register(Partenaire, PartenaireAdmin)
 
 class BlogCommentAdmin(admin.ModelAdmin):
     date_hierarchy      = 'timestamp'
@@ -110,7 +110,8 @@ class TrainingAdmin(SummernoteModelAdmin):
         model = Training
 admin.site.register(Training, TrainingAdmin)
 
-class MachineAdmin(admin.ModelAdmin):
+class MachineAdmin(SummernoteModelAdmin):
+    summernote_fields = ('description',)
     date_hierarchy      = 'timestamp'
     list_display        = ['name', 'active', 'timestamp', 'updated']
     list_display_links  = ['name',]

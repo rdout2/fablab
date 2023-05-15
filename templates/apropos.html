@@ -8,6 +8,121 @@
 
 
 
+<!--Breadcrumb Start-->
+<div class="pq-breadcrumb pq-bg-dark pq-bg-img-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <div class="pq-breadcrumb-title">
+                        <h1>{{ blog.name|title }}</h1>
+                    </div>
+                    <div class="pq-breadcrumb-container">
+                        <ol class="breadcrumb align-items-center">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home me-2"></i>Acceuil</a>
+                            </li>
+                            <li class="breadcrumb-item active">A-propos</li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Breadcrumb End-->
+
+
+<section class="flat-labs">
+    <div id="labs-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active carousel-item-left">
+                <div class="row p-5">
+                    <div class="col-6">
+                        <img class="d-block w-75" src="{% static 'assets/rev/assets/fablab.png' %}" alt="First slide">
+                    </div>
+                    <div class="col-6 lab-content">
+                        <h1> Qu’est-ce qu’un Fablab ?</h1>
+                        <p>
+                            Un FabLab (contraction de l’anglais Fabrication Laboratory) est un lieu ouvert à tous dans lequel sont mis à disposition des utilisateurs toutes sortes de machines et d’outils. Chacun peut y réaliser ses projets de fabrication d’objets, partant de l’idée jusqu’à la finalisation, en passant par le prototypage.C’est aussi une plateforme d’apprentissage et de partage qui favorise la création collaborative, l’innovation et l’invention, stimulant ainsi l’entrepreneuriat local avec une approche DIY (Do It Yourself – faire par soi-même).</p>
+                        <h2>FABLAB DE N'Djamena</h2>
+                        <p>
+                            FABLAB  est un atelier de fabrication numérique de WenakLabs, qui fonctionne sur le modèle Open-space, met à la disposition du grand public des machines à commande numérique pour la conception et la réalisation d’objets. Ce laboratoire est ouvert aux jeunes qui souhaitent acquérir des compétences leur permettant d’opérer rapidement un passage du concept au prototype d’objets physiques, « intelligents » ou non.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!--Growth Start-->
+ <section class="pq-bg-dark pq-bg-img-2 pq-pb-220">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="pq-section pq-style-1 text-center">
+                    <span class="pq-section-sub-title"># Notre activité en croissance</span>
+                    <h5 class="pq-section-title pq-text-white" id="company" data-high_text="Company"
+                        data-title_text="Intelligence And Collaboration IT Company Service."
+                        data-rough_color="#fd4a18" data-rough_type="underline">Pour concrétiser vos projets</h5>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="pq-icon-box pq-style-6">
+                    <div class="pq-icon-box-icon">
+                        <span class="pq-icon">
+                            <i class="flaticon-ux-design"></i>
+                        </span>
+                    </div>
+                    <div class="pq-icon-box-content">
+                        <h4 class="pq-icon-box-title">Entreprendre</h4>
+                        <p class="pq-icon-box-description">Le FABLAB offre un programme d’adhésion et d’accompagnement spécifiques pour les professionnels. Il aide les entreprises à concevoir, prototyper et réaliser leurs projets innovants.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-4 mt-md-0">
+                <div class="pq-icon-box pq-style-6">
+                    <div class="pq-icon-box-icon">
+                        <span class="pq-icon">
+                            <i class="flaticon-laptop"></i>
+                        </span>
+                    </div>
+                    <div class="pq-icon-box-content">
+                        <h4 class="pq-icon-box-title">Fabriquer</h4>
+                        <p class="pq-icon-box-description">Au sein du Lab vous trouverez des équipements et outils de qualité professionnelle (imprimante 3D, découpe laser, brodeuse numérique… ). Le principe du fablab c’est de faire soi-même (DIY) et s’entraider.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-4 mt-xl-0">
+                <div class="pq-icon-box pq-style-6">
+                    <div class="pq-icon-box-icon">
+                        <span class="pq-icon">
+                            <i class="flaticon-computer"></i>
+                        </span>
+                    </div>
+                    <div class="pq-icon-box-content">
+                        <h4 class="pq-icon-box-title">Apprendre</h4>
+                        <p class="pq-icon-box-description">LE FABLAB propose des ateliers d’initiation pour rendre autonomes les « makers » dans la réalisation de leurs projets. Ils sont obligatoires pour pouvoir utiliser en solo les machines à disposition.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 mt-4 mt-xl-0">
+                <div class="pq-icon-box pq-style-6">
+                    <div class="pq-icon-box-icon">
+                        <span class="pq-icon">
+                            <i class="flaticon-monitor-screen"></i>
+                        </span>
+                    </div>
+                    <div class="pq-icon-box-content">
+                        <h4 class="pq-icon-box-title">Partager</h4>
+                        <p class="pq-icon-box-description">Dans son local FABLAB  met à disposition des espaces de travail où les membres viennent collaborer ensemble sur des projets en partageant leurs compétences et leurs savoirs dans la bonne humeur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Growth End-->
 
 
 

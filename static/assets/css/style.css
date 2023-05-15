@@ -64,7 +64,7 @@ Fonts
 Moz Selection
 ================================================*/
 :root {
-	--primary-color: #fd4a18;
+	--primary-color: #db1b1b;
 	--dark-color: #151515;
 	--secondary-color: #616161;
 	--grey-color: #F7F8F9;
@@ -106,16 +106,29 @@ body {
 	overflow-x: hidden;
 }
 
+.leger {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.5);
+}
+.ecran {
+	position: absolute;
+	height: 1200;
+	width: 1080;
+	
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: var(--title-fonts);
+	
 	color: var(--dark-color);
 	font-style: normal;
-	text-transform: capitalize;
+	
 	font-weight: 600;
 	margin: 0;
 	word-wrap: break-word;

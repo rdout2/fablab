@@ -51,15 +51,15 @@
                                     </li>
                                   
                                     <li class="menu-item {% active_link 'machine' css_class='current-menu-item' %} ">
-                                        <a href="{% url 'machine' %}">Nos Machines</a>
+                                        <a href="{% url 'machine' %}">Machines</a>
                                         
                                     </li>
                                     <li class="menu-item {% active_link 'training' css_class='current-menu-item' %}" >
-                                        <a href="{% url 'training' %}">Nos Formations</a>
+                                        <a href="{% url 'training' %}">Formations</a>
                                         
                                     </li>
                                             <li class="menu-item {% active_link 'blog' css_class='current-menu-item' %}">
-                                                <a href="{% url 'blog' %}">Blogs</a>
+                                                <a href="{% url 'blog' %}">Blog</a>
                                             </li>
                                       
                                             <li class="menu-item {% active_link 'contact' css_class='current-menu-item' %}">
@@ -74,9 +74,9 @@
                             <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="fa fa-search"></i></a>
                             <div class="pq-search-form">
 
-                                <form role="search" method="get" class="search-form" action="https://peacefulqode.com/themes/techtrix/html/main-home.html">
+                                <form role="search" method="get" class="search-form" action="{% url 'home' %}">
                                     <label>
-                                        <span class="screen-reader-text">Search for:</span>
+                                        <span class="screen-reader-text">recherche:</span>
                                         <input type="search" class="search-field" placeholder="Search …" value=""
                                             name="s">
                                     </label>

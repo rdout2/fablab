@@ -8,11 +8,13 @@ def home_view(request):
     blogs = Blog.objects.all()
     categories = BlogCategory.objects.all()
     testimonials = Testimonial.objects.all()
+    partenaires = Partenaire.objects.all()
     template = "index.html"
     context = {
         'blogs': blogs,
         'categories': categories,
         'testimonials' : testimonials,
+        'partenaires' : partenaires,
     }
     return render(request, template, context)
 
